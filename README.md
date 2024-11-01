@@ -1,56 +1,81 @@
 # AIMetricMate
 
-AIMetricMate is a Discord bot designed to help developers optimize their AI-assisted development workflow by tracking LLM costs, managing prompts, and analyzing GitHub Copilot usage.
+AIMetricMate is a Discord bot designed to track and analyze AI development metrics, focusing on LLM cost analytics, GitHub Copilot usage monitoring, and prompt management.
 
 ## Features
 
-- **LLM Analytics & Cost Tracking**
-  - Monitor token usage and costs across different LLMs
-  - Generate performance reports
-  - Compare LLM effectiveness
+- LLM cost tracking and analytics
+- GitHub Copilot usage monitoring
+- Prompt management system
+- Project showcase capabilities
+- Real-time analytics dashboard
 
-- **GitHub Copilot Integration**
-  - Track feature usage (completions, chat, PR summaries)
-  - Analyze productivity improvements
-  - Compare with other AI tools
+## Quick Start
 
-- **Prompt Management**
-  - Save and categorize effective prompts
-  - Track prompt performance metrics
-  - Share successful prompts with the community
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/aimetricmate.git
+cd aimetricmate
+```
 
-- **Project Showcase**
-  - Display AI-assisted projects
-  - Track AI contribution metrics
-  - Share development insights
+2. Set up virtual environment:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+```
 
-## Tech Stack
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-- Python 3.11
-- Discord.py
-- PostgreSQL
-- Docker
-- GitHub Actions
+4. Configure environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your configuration
+```
 
-## Development Status
+5. Run the bot:
+```bash
+python -m aimetricmate
+```
 
-🚧 Currently in initial development phase
+## Documentation
 
-## Getting Started
+- [Project Overview](docs/project_overview.md)
+- [Development Guide](docs/development_guide.md)
+- [Database Schema](docs/database_schema.md)
+- [API Documentation](docs/api_documentation.md)
 
-Development setup instructions coming soon.
+## Development
 
-## Contributing
+### Prerequisites
+- Python 3.11+
+- Azure Cosmos DB account
+- Discord Developer account
+- Docker (for deployment)
 
-This project is currently in its initial setup phase. Contribution guidelines will be added as the project develops.
+### Testing
+```bash
+pytest
+```
+
+### Code Style
+```bash
+black .
+```
+
+## Deployment
+
+### Docker
+```bash
+docker build -t aimetricmate .
+docker run -d --env-file .env aimetricmate
+```
+
+### DigitalOcean
+Automated deployment via GitHub Actions to DigitalOcean.
 
 ## License
 
-MIT
-
-## Community
-
-Join our Discord server: AI Dev Insights Den (Link coming soon)
-
----
-Developed with ❤️ for the AI development community
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
