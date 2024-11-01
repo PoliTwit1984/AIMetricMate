@@ -27,4 +27,4 @@ RUN useradd -m -r botuser && \
 USER botuser
 
 # Command to run the bot
-CMD ["python", "-m", "aimetricmate"]
+CMD ["python", "main.py"]
